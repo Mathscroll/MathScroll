@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Temporary text</title>
+        <link rel="icon" type = "image/png" href = "images/ShortLogo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src = "calc1.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <div class = "LogoContainerClass">
+                 <img src="images/Logo1.png" alt="MathScroll" width="100", height="50">
+            </div>
+
+            <div class = "loginButtonContainerClass">
+                <nav>
+                    <ul>
+                        <li id="login">
+                            <a id="login-trigger" href="#">
+                                <img src="images/login.png" alt="login" width="30", height="30">
+                            </a>
+                            <div id="login-content">
+                                <button class="closeBtnClass">X</button>
+                                <form id>
+                                    <fieldset id="inputs">
+                                        <label id="loginHeader">Sign In</label>
+                                        <br>
+                                        <label>Username</label>
+                                        <input id="username" type="email" placeholder="Your email address" required>  
+                                        <label>Password</label> 
+                                        <input id="password" type="password" placeholder="Password" required>
+                                        <button id="forgotPasswordBtn"> Forgot Password </button>
+                                        <button id="newUserBtn"> New User? Please register </button>
+                                    </fieldset>
+                                    <fieldset id="actions">
+                                        <button id="loginBtn">Log in</button>
+                                        <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                                    </fieldset>
+                                </form>
+                             </div>
+
+                             <div id="signup-content">
+                                <button class="closeBtnClass">X</button>
+                                <form>
+                                     <fieldset id="inputsNewUser">
+                                         <label id="signUpHeader">Sign Up Sheet</label>
+                                         <br>
+                                         <label>First Name</label>
+                                         <input id="firstname" type="text" placeholder="Your firstname" required>
+                                         <label>Last Name</label>
+                                         <input id="lastname" type="text" placeholder="Your lastname" required>
+                                         <label>Email</label>
+                                         <input id="usernameNewUser" type="email" placeholder="Your email address" required>  
+                                         <label>Password</label> 
+                                         <input id="passwordNewUser" type="password" placeholder="Password" required>
+                                         <label>Confirm Password</label>
+                                         <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                                     </fieldset>
+                                     <fieldset id="actionsNewUser">
+                                         <button id="signupBtn">Sign Up</button>
+                                     </fieldset>
+                                </form>
+                             </div> 
+
+                             <div id="loggedon-content">
+                                <button class="closeBtnClass">X</button>
+                                <form>
+                                     <fieldset id="UserData">
+                                        <div id="sessionUsername"></div>
+                                        <div id="sessionEmail"></div>
+                                      </fieldset>
+                                      <fieldset id="actionsUserdata">
+                                        <button id="logOut">Log Out</button>
+                                      </fieldset>
+                                </form>
+                              </div> 
+
+                          </li>
+                     </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
+        <button id="TempBtn1">TempBtn1</button> 
+        <button id="TempBtn2">TempBtn2</button> 
+        <button id="TempBtn3">TempBtn3</button> 
+        <br>
+        <div id="tempText"></div>
+
+        <div class="msgBox" id="msgBoxID" style="display:none;">
+            <div class="msgBoxContent" id="msgBoxContentID"></div>
+            <div class="msgBoxClose" id="msgBoxCloseID">&#10006</div>
+        </div>
+
+        <div class = "footer">
+             <div class = copyright> &copy MathScroll </div>
+             <a href="/" class = Home> Home </a>
+             <a href="tutorial" class = tutorial> Tutorial </a>
+             <a href="practice" class = practice> Practice </a>
+             <a href="contact" class = contactus> Contact Us </a>
+             <a href="about" class = aboutus> About Us </a> 
+             <a href="termsOfService" class = termsofservice> Terms of Service </a>
+             <a href="privacy" class = privacy> Privacy </a> 
+        </div>
+
+        <script type="text/javascript">
+                document.getElementById('TempBtn1').addEventListener("click", function(){bl("D1"); });
+                document.getElementById('TempBtn2').addEventListener("click", function(){bl("D2"); });
+                document.getElementById('TempBtn3').addEventListener("click", function(){bl("D3"); });
+        </script> 
+    </body>
+</html> 

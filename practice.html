@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+
+        <meta name="keyword" content="algebra,solver,steps,step-by-step,solution,math,calculator,equation,substitution,elimination,partial fractions,calculus">
+        <meta name="description" content="Solve pre-algebra, Algebra, pre-calculus, and calculus problems with detailed steps and practice thousands of math problems">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119666405-1"></script>
+        <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'UA-119666405-1');
+        </script>
+
+        <title>Online Algebra Solver - Step by Step</title>
+        <link rel="icon" type = "image/png" href = "images/ShortLogo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="mathtext.css"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+        <script type="text/javascript" src="mathtext.min.js" defer></script>
+        <script type="text/javascript" src = "calc1.js" defer></script>
+        <script type="text/javascript" src = "calc2.js" defer></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" defer></script>
+            
+    </head>
+
+    <body>
+        
+        <div class = "header">
+            <div class = "LogoContainerClass" id = "LogoContainerID">
+                 <img src="images/Logo1.png" alt="MathScroll" width="100", height="50">
+                 <div class="dropdown">
+                      <button class="dropbtn">Pre Algebra</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Primes">Primes</button>
+                           <button class = "MenuItems" id="Factors of Numbers">Factors of Numbers</button>
+                           <button class = "MenuItems" id="Convert to Fractions">Convert Decimals to Fractions</button>
+                           <button class = "MenuItems" id="LCM of Numbers">LCM</button>
+                           <button class = "MenuItems" id="HCF of Numbers">HCF</button>
+                           <button class = "MenuItems" id="Fraction Comparison">Fraction Comparison</button>
+                           <button class = "MenuItems" id="Fractional Number Operation">Fraction Operations</button>
+                           <button class = "MenuItems" id="Irrational Numbers">Irrational Numbers</button>
+                           <button class = "MenuItems" id="Surds">Surds</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Algebra</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Algebra Operations">Algebra Operations</button>
+                           <button class = "MenuItems" id="Factorization">Factors of Expressions</button>
+                           <button class = "MenuItems" id="Fractional Expression Operation">Fractional Expression Operations</button>
+                           <button class = "MenuItems" id="Long Division">Long Division</button>
+                           <button class = "MenuItems" id="Linear Simultaneous Equations">Linear System of Equations</button>
+                           <button class = "MenuItems" id="Simultaneous Equations">System of Equations</button>
+                           <button class = "MenuItems" id="Solve for roots">Roots Solver</button>
+                           <button class = "MenuItems" id="Partial Fractions">Partial Fractions</button>
+                           <button class = "MenuItems" id="Exponential Operations">Exponential Operations</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Pre Calculus</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Simultaneous Equations">System of Equations</button>
+                           <button class = "MenuItems" id="Partial Fractions">Partial Fractions</button>
+                           <button class = "MenuItems" id="complex Numbers">Complex Number Operations</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Calculus</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Differentiation">1st order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">2nd order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">Nth order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">Partial Differentiation</button>
+                      </div>
+                 </div>
+
+                 <a href="javascript:void(0);" class="icon" id="reponsiveSubjectList" onclick="aq()">
+                 <!--&#9776;-->
+                    <div style="height:30px;width:25px;">
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0;"></div> 
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0; color: white"></div>
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0; color: white"></div>
+                     </div>
+                 </a>
+
+
+                 <div class = "loginButtonContainerClass">
+                    <nav>
+                        <ul>
+                            <li id="login">
+                                <a id="login-trigger" href="#">
+                                    <img src="images/login.png" alt="login" width="30", height="30">
+                                </a>
+                                <div id="login-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form id>
+                                        <fieldset id="inputs">
+                                            <label id="loginHeader">Sign In</label>
+                                            <br>
+                                            <label>Username</label>
+                                            <input id="username" type="email" placeholder="Your email address" required>  
+                                            <label>Password</label> 
+                                            <input id="password" type="password" placeholder="Password" required>
+                                            <button id="forgotPasswordBtn"> Forgot Password </button>
+                                            <button id="newUserBtn"> New User? Please register </button>
+                                        </fieldset>
+                                        <fieldset id="actions">
+                                            <button id="loginBtn">Log in</button>
+                                            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <div id="signup-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form>
+                                        <fieldset id="inputsNewUser">
+                                            <label id="signUpHeader">Sign Up Sheet</label>
+                                            <br>
+                                            <label>First Name</label>
+                                            <input id="firstname" type="text" placeholder="Your firstname" required>
+                                            <label>Last Name</label>
+                                            <input id="lastname" type="text" placeholder="Your lastname" required>
+                                            <label>Email</label>
+                                            <input id="usernameNewUser" type="email" placeholder="Your email address" required>  
+                                            <label>Password</label> 
+                                            <input id="passwordNewUser" type="password" placeholder="Password" required>
+                                            <label>Confirm Password</label>
+                                            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                                        </fieldset>
+                                        <fieldset id="actionsNewUser">
+                                            <button id="signupBtn">Sign Up</button>
+                                        </fieldset>
+                                    </form>
+                                </div> 
+
+                                <div id="loggedon-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form>
+                                        <fieldset id="UserData">
+                                            <div id="sessionUsername"></div>
+                                            <div id="sessionEmail"></div>
+                                            <a href="practice.html" class = contactus> Practice </a>
+                                        </fieldset>
+                                        <fieldset id="actionsUserdata">
+                                            <button id="logOut">Log Out</button>
+                                        </fieldset>
+                                    </form>
+                                </div> 
+
+                            </li>
+                        </ul>
+                    </nav>
+
+                 </div>
+            </div>
+        </div>
+
+        <div class= "mainContent">
+
+        <h1 id="conceptName">Practice Problems</h1>
+
+        <div class = "menuBarInputTextBreakerClass"></div>
+
+        <div class = "mainPracticeContainer">
+            
+            <div id="browser"></div>
+
+            <div id="practiceProblemContainerID" class="practiceProblemContainerClass">
+                 <button id="prevBtnID" class = "prevBtnClass">Prev</button>
+                 <div id="practiceDivContainer">
+                     <span id="practiceQuestionBoxID" class= "practiceQuestionBoxClass" name = "equation"></span>
+                 </div>
+                 <button id="nextBtnID" class = "nextBtnClass">Next</button>
+            </div>
+
+            <button id="practiceQuestionBoxGoButtonID" class="practiceQuestionBoxGoButtonClass">Go</button>
+            
+            <div id = "tabKeySolutionExampleContainer" class = "tabKeySolutionExampleContainerClass">
+                
+                <div id = "SolutionAndStepsDivID" class = "SolutionAndStepsDivClass" style="display:none">
+                    <div class = "likeAndShareBoxClass" id = "likeAndShareBoxID" style="display:none">
+
+                        <button id="printSolutionBtnID" class="printSolutionBtnClass">
+                            <img src="images/printerImg.png" alt="print" width="35", height="35">
+                        </button>
+                        <button id="printSolutionPDFBtnID" class="printSolutionPDFBtnClass">
+                            <img src="images/pdf.png" alt="printPDF" width="35", height="35">
+                        </button>
+                        <button id="emailSolutionBtnID" class="emailSolutionBtnClass">
+                            <img src="images/message.png" alt="sendEmailToFriends" width="35", height="35">
+                        </button>
+
+                        <form id="emailDetailsID" name="emailDetailsName" style="display:none">
+                            <input type="text" id="emailID" placeholder="Email Address to be Sent: ">
+                            <input type="text" id="nameID" placeholder="Your Name">
+                            <button id="emailSubmitID" onclick="return false;">Submit</button>
+                            <button id="emailFormCloseID" onclick="return false;">Close</button>
+                        </form>
+
+                        <div class="fb-share-button" data-layout="button_count" data-size="small" data-mobile-iframe="true"><div onclick="fbshareCurrentPage()" target="_blank" alt="Share on Facebook" src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</div></div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="loader" id="loaderID" style="display:none;"></div>
+            <div class="msgBox" id="msgBoxID" style="display:none;">
+                <div class="msgBoxContent" id="msgBoxContentID"></div>
+                <div class="msgBoxClose" id="msgBoxCloseID">&#10006</div>
+            </div>
+        
+        </div>
+
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        <!--
+        <button class="ShowGraph" id = "btnGraph" value = "Graph" onclick = "showGraph()"> Show Graph </button>
+        -->
+        <div class = "footer">
+             <div class = copyright> &copy MathScroll </div>
+             
+             <!--div class = "socialMediaLinks"-->
+
+                <!--a href="https://www.facebook.com/mathscroll" class = "facebookContainer">
+                    <img src="images/facebook.svg" alt="facebook" width="25", height="25">
+                </a>
+                <div >
+                <a href="https://www.linkedin.com/company/mathscroll/" class = "linkedinContainer">
+                    <img src="images/linkedin.svg" alt="linkedin" width="25", height="25">
+                </a>
+                <a href="" class = "youtubeContainer">
+                    <img src="images/youtube.svg" alt="facebook" width="30", height="30">
+                </a-->
+
+            <!--/div-->
+             <a href="/" class = Home> Home </a>
+             <a href="tutorial" class = tutorial> Tutorial </a>
+             <a href="practice" class = practice> Practice </a>
+             <a href="contact" class = contactus> Contact Us </a>
+             <a href="about" class = aboutus> About Us </a> 
+             <a href="termsOfService" class = termsofservice> Terms of Service </a>
+             <a href="privacy" class = privacy> Privacy </a> 
+        </div>
+
+        <script type="text/javascript">
+            function openSubjects() {
+                var x = document.getElementById("LogoContainerID");
+                if(x.className === "LogoContainerClass") {
+                   x.className += " responsive";
+                } else {
+                   x.className = "LogoContainerClass";
+                }
+            }
+        </script>
+
+    
+    </body>
+    </html> 

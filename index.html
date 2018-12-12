@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+
+        <meta name="keyword" content="algebra,solver,steps,step-by-step,solution,math,calculator,equation,substitution,elimination,partial fractions,calculus">
+        <meta name="description" content="Solve pre-algebra, Algebra, pre-calculus, and calculus problems with detailed steps and practice thousands of math problems">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Algebra Solver - Step by Step</title>
+
+        <link rel="icon" type = "image/png" href = "images/ShortLogo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="mathtext.css"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+        <script type="text/javascript" src="mathtext.min.js" defer></script>
+        <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" defer></script-->
+
+        <meta name="msvalidate.01" content="694E5D821456955D69566B3CBC863DC5" />
+        <meta property="og:url"           content="https://www.MathScroll.com/"/>
+        <meta property="og:type"          content="website"/>
+        <meta property="og:title"         content="Algebra Solver" />
+        <meta property="og:description"   content="Shows work step-by-step" />
+        <meta property="og:image"         content="http://www.mathscroll.com/images/Logo1.png" />
+            
+    </head>
+
+    <body>
+        
+        <div class = "header">
+            <div class = "LogoContainerClass" id = "LogoContainerID">
+                 <img src="images/Logo1.png" alt="MathScroll" width="100", height="50">
+                 <div class="dropdown">
+                      <button class="dropbtn">Pre Algebra</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Primes">Primes</button>
+                           <button class = "MenuItems" id="Factors of Numbers">Factors of Numbers</button>
+                           <button class = "MenuItems" id="Convert to Fractions">Convert Decimals to Fractions</button>
+                           <button class = "MenuItems" id="LCM of Numbers">LCM</button>
+                           <button class = "MenuItems" id="HCF of Numbers">HCF</button>
+                           <button class = "MenuItems" id="Fraction Comparison">Fraction Comparison</button>
+                           <button class = "MenuItems" id="Fractional Number Operation">Fraction Operations</button>
+                           <button class = "MenuItems" id="Irrational Numbers">Irrational Numbers</button>
+                           <button class = "MenuItems" id="Surds">Surds</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Algebra</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Algebra Operations">Algebra Operations</button>
+                           <button class = "MenuItems" id="Factorization">Factors of Expressions</button>
+                           <button class = "MenuItems" id="Fractional Expression Operation">Fractional Expression Operations</button>
+                           <button class = "MenuItems" id="Long Division">Long Division</button>
+                           <button class = "MenuItems" id="Simple Equation">Simple Equation</button>
+                           <button class = "MenuItems" id="Linear Simultaneous Equations">Linear System of Equations</button>
+                           <button class = "MenuItems" id="Simultaneous Equations">System of Equations</button>
+                           <button class = "MenuItems" id="Solve for roots">Roots Solver</button>
+                           <button class = "MenuItems" id="Partial Fractions">Partial Fractions</button>
+                           <button class = "MenuItems" id="Exponential Operations">Exponential Operations</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Pre Calculus</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Simultaneous Equations">System of Equations</button>
+                           <button class = "MenuItems" id="Partial Fractions">Partial Fractions</button>
+                           <button class = "MenuItems" id="complex Numbers">Complex Number Operations</button>
+                      </div>
+                 </div>
+
+                 <div class="dropdown">
+                      <button class="dropbtn">Calculus</button>
+                      <div class="dropdown-content">
+                           <button class = "MenuItems" id="Differentiation">1st order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">2nd order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">Nth order Differentiation</button>
+                           <button class = "MenuItems" id="Differentiation">Partial Differentiation</button>
+                      </div>
+                 </div>
+
+                 <a href="javascript:void(0);" class="icon" id="reponsiveSubjectList" onclick="aq()">
+                     <div style="height:30px;width:25px;">
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0;"></div> 
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0; color: white"></div>
+                        <div style="background-color: white; padding: 0.5px 0 0.5px 0;width: 25px; height: 2px; margin:6px 0 6px 0; color: white"></div>
+                     </div>
+                 </a>
+
+
+                 <div class = "loginButtonContainerClass">
+                    <nav>
+                        <ul>
+                            <li id="login">
+                                <a id="login-trigger" href="#" onclick="return false">
+                                    <img src="images/login.png" alt="login" width="30", height="30">
+                                </a>
+                                <div id="login-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form>
+                                        <fieldset id="inputs">
+                                            <label id="loginHeader" style="padding:80px">Sign In</label>
+                                            <br>
+                                            <label>Username</label>
+                                            <input id="username" type="email" placeholder="Your email address" required>  
+                                            <label>Password</label> 
+                                            <input id="password" type="password" placeholder="Password" required>
+                                            <button id="forgotPasswordBtn" onclick="return false"> Forgot Password </button>
+                                            <button id="newUserBtn"> New User? Please register </button>
+                                        </fieldset>
+                                        <fieldset id="actions">
+                                            <button id="loginBtn" onclick="return false">Log in</button>
+                                            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <div id="signup-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form>
+                                        <fieldset id="inputsNewUser">
+                                            <label id="signUpHeader" style="padding:80px">Sign Up</label>
+                                            <br>
+                                            <label>First Name</label>
+                                            <input id="firstname" type="text" placeholder="Your firstname" required>
+                                            <label>Last Name</label>
+                                            <input id="lastname" type="text" placeholder="Your lastname" required>
+                                            <label>Email</label>
+                                            <input id="usernameNewUser" type="email" placeholder="Your email address" required>  
+                                            <label>Password</label> 
+                                            <input id="passwordNewUser" type="password" placeholder="Password" required>
+                                            <label>Confirm Password</label>
+                                            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                                        </fieldset>
+                                        <fieldset id="actionsNewUser">
+                                            <button id="signupBtn" onclick="return false">Sign Up</button>
+                                        </fieldset>
+                                    </form>
+                                </div> 
+
+                                <div id="loggedon-content">
+                                    <button class="closeBtnClass">X</button>
+                                    <form>
+                                        <fieldset id="UserData">
+                                            <div id="sessionUsername"></div>
+                                            <div id="sessionEmail"></div>
+                                        </fieldset>
+                                        <fieldset id="actionsUserdata">
+                                            <button id="logOut" onclick="return false">Log Out</button>
+                                        </fieldset>
+                                    </form>
+                                </div> 
+
+                            </li>
+                        </ul>
+                    </nav>
+
+                 </div>
+            </div>
+        </div>
+
+        <div class= "mainContent">
+
+          <h1 id="conceptName">Algebra Solver</h1>
+
+          <div class = "menuBarInputTextBreakerClass"></div>
+          <div class = "mainContainer">
+              
+              <div id="browser"></div>
+              <div class = "inputBoxGoButtonContainerClass"> 
+                  
+                  <div id = "inputTextBoxContainer" class = "inputTextBoxContainerClass">
+
+                      <form id = "inputTextSpanContainer" autocomplete="off" name="equation">
+                          <div id="inputTextBoxDivContainer">
+                              <span id="inout" class= "mainInputBox" name = "equation" onfocus="hideSoftKeyBoard()" onclick="hideSoftKeyBoard()"></span>
+                          </div>
+                      </form>
+
+                      <div id="inputTextBoxGoButtonContainer">
+                           <button id="inputTextBoxGoButtonID" class="inputTextBoxGoButtonClass">Go</button>
+                      </div>
+                      <div class="solverResponseClass" id="solverResponseId"></div>
+                  </div>
+              </div>
+
+              <div id = "tabKeySolutionExampleContainer" class = "tabKeySolutionExampleContainerClass">
+                  
+                  <div class = "tabKeysContainerClass">
+                      <button class="tabBtnClass" onclick="ao('keyPadContainerID',this)" style="background-color:#606060" id="keysBtn">Keys</button><button class="tabBtnClass" onclick="ao('exampleProblemsID',this)" id="examplesBtn">Examples</button><button class="tabBtnClass" onclick="ao('SolutionAndStepsDivID',this)" id="stepsBtn">Steps</button><button class="tabBtnClass" onclick="ao('historyProblemsID',this)" id="historyBtn">History</button>
+                  </div>
+
+                  <!--div> <br> </div-->
+
+                  <div id="SolutionAndStepsDivID" class="SolutionAndStepsDivClass" style="display:none">
+                      <div class = "likeAndShareBoxClass" id = "likeAndShareBoxID" style="display:none">
+
+                          <button id="printSolutionBtnID" class="printSolutionBtnClass">
+                              <img src="images/printerImg.png" alt="print" width="35", height="35">
+                              <span class=tooltipPrint>Print</span>
+                          </button>
+                          <button id="printSolutionPDFBtnID" class="printSolutionPDFBtnClass">
+                              <img src="images/pdf.png" alt="printPDF" width="35", height="35">
+                              <span class=tooltipPrintPDF>PDF</span>
+                          </button>
+                          <button id="emailSolutionBtnID" class="emailSolutionBtnClass">
+                              <img src="images/message.png" alt="sendEmailToFriends" width="35", height="35">
+                              <span class=tooltipEmail>Email</span>
+                          </button>
+                          <button id="verifySolutionBtnID" class="verifySolutionBtnClass">
+                              <img src="images/verify.png" alt="verifyAnswer" width="35", height="35">
+                              <span class=tooltipVerify>Verify Answer</span>
+                          </button>
+
+                          <form id="emailDetailsID" name="emailDetailsName" style="display:none">
+                              <input type="text" id="emailID" placeholder="Email Address to be Sent: ">
+                              <input type="text" id="nameID" placeholder="Your Name">
+                              <button id="emailSubmitID" onclick="return false;">Submit</button>
+                              <button id="emailFormCloseID" onclick="return false;">Close</button>
+                          </form>
+
+                          <form id="feedbackDetailsID" name="feedbackDetailsName" style="display:none">
+                              <input type="text" id="feedbackEmailID" placeholder="Your Email Address">
+                              <input type="text" id="feedbackNameID" placeholder="Your Name">
+                              <textarea type="text" id="feedbackID" placeholder="Got a wrong answer? Any feedback regarding the question and the answer? Thanks!"></textarea>
+                              <button id="feedbackSubmitID" onclick="return false;">Submit</button>
+                              <button id="feedbackFormCloseID" onclick="return false;">Close</button>
+                          </form>
+
+                          <span id="fbShareLogoContainerID">
+                            <div id="fb-root"></div>
+                            <div class="fb-like" data-href="http://www.mathscroll.com" data-layout="button_count" data-action="like" data-show-faces="true"></div>
+                            <div class="fb-share-button" data-href="http://www.mathscroll.com" data-layout="button"></div>
+                          </span>                        
+                      </div>
+                  </div>
+
+                  <div id="keyPadContainerID" class = "keyPadContainerClass">
+
+                      <table id="commonKeyPadID" class = "commonKeyPadClass">
+
+                          <tr id="commonKeysRow1ID" class = "commonKeysRow1Class">
+                              <td>
+                                  <button class="button" id="btn^">^</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn1">1</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn2">2</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn3">3</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn4">4</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn5">5</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn6">6</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn7">7</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn8">8</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn9">9</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn0">0</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn=">=</button> 
+                              </td>
+                          </tr>
+
+                          <tr id="commonKeysRow2ID" class = "commonKeysRow2Class">
+                              
+                              <td>
+                                  <button class="button" id="btn:">:</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn(">(</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn)">)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn.">.</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn,">,</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn;">;</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn+">+</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn-">-</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn*">*</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn/">/</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnX">x</button> 
+                              </td>
+                              <td>
+                                  <button class="button" id="btnY">y</button>
+                              </td>
+                          </tr>
+
+                      </table>
+
+                      <table id="alphaKeyPadID" class = "alphaKeyPadClass" style="display:none">
+
+                          <tr id="alphaRow1ID" class = "alphaRow1Class">
+                              <td>
+                                  <button class="button" id="btn^">^</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnQ">q</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnW">w</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnE">e</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnR">r</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnT">t</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnY">y</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnU">u</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnI">i</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnO">o</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnP">p</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn=">=</button>
+                              </td>
+                          </tr>
+
+                          <tr id="alphaRow2ID" class = "alphaRow2Class">
+                              
+                              <td>
+                                  <button class="button" id="btn:">:</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnA">a</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnS">s</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnD">d</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnF">f</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnG">g</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnH">h</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnJ">j</button> 
+                              </td>
+                              <td>
+                                  <button class="button" id="btnK">k</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnL">l</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn+">+</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn-">-</button>
+                              </td>
+                              
+                          </tr>
+
+                          <tr id="alphaRow3ID" class = "alphaRow3Class">
+                              
+                              <td>
+                                  <button class="button" id="btn;">;</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn(">(</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn)">)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnZ">z</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnX">x</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnC">c</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnV">v</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnB">b</button> 
+                              </td>
+                              <td>
+                                  <button class="button" id="btnN">n</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnM">m</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn*">*</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btn/">/</button>
+                              </td>
+                              
+                          </tr>
+
+                      </table>
+
+                      <table id="greekKeyPadID" class = "greekKeyPadClass" style="display:none">
+
+                          <tr id="greekRow1ID" class = "greekRow1Class">
+                              <td>
+                                  <button class="button" id="btnAlpha"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnBeta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnTheta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnGamma"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnDelta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnEpsilon"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnZeta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnEta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnKappa"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnLambda"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMu"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnNu"></button> 
+                              </td>
+                          </tr>
+
+                          <tr id="greekRow2ID" class = "greekRow2Class">
+                              
+                              <td>
+                                  <button class="button" id="btnXi"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnRho"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnSigma"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnTau"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnUpsilon"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnPhi"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnChi"></button> 
+                              </td>
+                              <td>
+                                  <button class="button" id="btnPsi"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnOmega"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnCapGamma"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnCapDelta"></button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnCapLambda"></button>
+                              </td>
+                          </tr>
+
+                      </table>
+                      
+                      <table id="matrixKeyPadID" class = "matrixKeyPadClass" style="display:none">
+
+                          <tr id="matrixRow1ID" class = "matrixRow1Class">
+                              <td>
+                                  <button class="button" id="btnMat12">(1,2)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat21">(2,1)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat22">(2,2)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat13">(1,3)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat31">(3,1)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat23">(2,3)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat32">(3,2)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat33">(3,3)</button>
+                              </td>
+                          </tr>
+
+                          <tr id="matrixRow2ID" class = "matrixRow2Class">
+                              
+                              <td>
+                                  <button class="button" id="btnMat14">(1,4)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat41">(4,1)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat24">(2,4)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat42">(4,2)</button> 
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat34">(3,4)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat43">(4,3)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMat44">(4,4)</button>
+                              </td>
+                              <td>
+                                  <button class="button" id="btnMatNM">(n,m)</button>
+                              </td>
+                          </tr>
+
+                      </table>
+
+                      <table id = "specialKeys1PadID" class = "specialKeys1PadClass">
+
+                          <tr id="specialKeysRow1ID" class = "specialKeysRow1Class">
+                              
+                              <td>
+                                  <button class="buttonSpl" id="btnsqr"></button>
+                              </td>
+                              <td>
+                                  <button class="buttonSpl" id="btncube"></button>
+                              </td>
+                              <td>
+                                  <button class="buttonSpl" id="btnsqrt"></button>
+                              </td>
+                              <td>
+                                  <button class="buttonSpl" id="btnpartial1x"></button>
+                              </td>
+                              <td>
+                                  <button class="buttonSpl" id="btnpartial2x"></button>
+                              </td>
+                              <td>
+                                  <button class="buttonSpl" id="btnpartialxy"></button>
+                              </td>
+                          </tr>
+                      </table> 
+
+                      <div id = "alphaCommonTogglePadID" class = "alphaCommonTogglePadClass">
+                          <button class="btnToggle" id="btnCommon" onclick="ap('commonKeyPadID',this)" style="display:none">123</button>
+                          <button class="btnToggle" id="btnAlphabet" onclick="ap('alphaKeyPadID',this)">abc</button>
+                          <button class="btnToggle" id="btnGreeks" onclick="ap('greekKeyPadID',this)">&#x3B1&#x3B2&#x3B3</button>
+                          <button class="btnToggle" id="btnMatrix" onclick="ap('matrixKeyPadID',this)" ></button>
+                          <button class="btnKeyStrokes" id="btnMoveRight"></button>
+                          <button class="btnKeyStrokes" id="btnMoveLeft"></button>
+                          <button class="btnKeyStrokes" id="btnBackspace"></button>
+                          <button class="btnKeyStrokes" id="btnDelete">del</button>
+                          <button class="btnKeyStrokes" id="btnClearAll">clr</button>
+                          <button class="btnKeyStrokes" id="btnSpace">spc</button>
+                      </div>
+
+                  </div>
+
+                  <div class = "exampleProblemsClass" id = "exampleProblemsID" style="display:none"></div>
+
+                  <div class = "exampleProblemsClass" id = "historyProblemsID" style="display:none"></div>
+
+              </div>
+
+              <div id="SocialMediaDivID" class ="SocialMediaDivClass"> 
+                <span class="SocialMediaPageLikes">Please like and follow us in social media</span>
+                <span class="SocialMediaLikesSpan">
+                   <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMathscroll&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" allowtransparency="true" style="border: none; height: 20px; width: 80px; overflow: hidden;"></iframe>
+                </span>
+                <span class="SocialMediaLikesSpan">
+                   <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/FollowCompany" data-id="1337"></script>
+                </span>
+               
+               <!--a href="https://twitter.com/symbolab" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @symbolab</a>
+               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script-->
+              </div>
+
+              <div class="loader" id="loaderID" style="display:none;"></div>
+              <div class="msgBox" id="msgBoxID" style="display:none;">
+                  <div class="msgBoxContent" id="msgBoxContentID"></div>
+                  <div class="msgBoxClose" id="msgBoxCloseID">&#10006</div>
+              </div>
+          
+          </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        <!--
+        <button class="ShowGraph" id = "btnGraph" value = "Graph" onclick = "showGraph()"> Show Graph </button>
+        -->
+        
+        <div class = "footer">
+             <div class = copyright> &copy MathScroll </div>
+
+             <a href="/" class = Home> Home </a>
+             <a href="tutorial" class = tutorial> Tutorial </a>
+             <a href="practice" class = practice> Practice </a>
+             <a href="contact" class = contactus> Contact Us </a>
+             <a href="about" class = aboutus> About Us </a> 
+             <a href="termsOfService" class = termsofservice> Terms of Service </a>
+             <a href="privacy" class = privacy> Privacy </a> 
+
+        </div>
+        <script type="text/javascript" src = "calc1.js" defer></script>
+        <script type="text/javascript" src = "calc2.js" defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119666405-1" defer></script>
+        <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'UA-119666405-1');
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous" defer></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+        <script type="text/javascript">            
+
+            (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if(d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+             fjs.parentNode.insertBefore(js, fjs); }(document,'script','facebook-jssdk'));
+
+            function hideSoftKeyBoard(){  
+                if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))){ hl(); }; document.getElementById('keysBtn').click();
+            }
+
+        </script>
+    
+    </body>
+    </html> 
